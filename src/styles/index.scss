@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@500&display=swap');
+
+
+$blue: #0048A9;
+$grey: #edeaea;
+$violet:#B186C5;
+$bg: url('../img/img2.png');
+
+/*Desktop version*/
+
+body {
+  font-family: 'Grandstander', cursive;
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+}
+
+/*Slides*/
+.slides {
+  width: 65%;
+  border-radius: 20px;
+  margin: auto;
+  
+  .carousel{
+    display: flex;
+    align-items: center;
+    background-image: $bg;
+    
+    p {
+      font-size: 5em;
+      margin:auto;
+      background: linear-gradient(to right, #000, rgba(255, 255, 255, 1));
+      background-clip: text;
+      color: transparent;
+      transition: all 5s;
+		
+      &:hover {
+        background: linear-gradient(to right, $blue, rgba(255, 255, 255, 1));
+        background-clip: text;
+        color: transparent;
+      }
+	
+    }
+  }
+}
+
+
+/*Mobile version*/
+@media only screen and (max-width: 768px) {
+
+  /**Slides**/
+  .slides {
+    width: 100%;
+    .react-slideshow-container {
+      margin: 20px;
+    }
+    .carousel {
+      p {
+        font-size: 2em;
+        margin:auto;
+      }
+    }
+  }
+}

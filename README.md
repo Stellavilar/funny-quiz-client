@@ -1,1 +1,1 @@
-# funny-quiz-client
+# Front-end of Funny Quiz application
