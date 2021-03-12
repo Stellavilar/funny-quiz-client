@@ -5,7 +5,7 @@ import App from './components/App';
 import axios from 'axios';
 
 
-axios.defaults.baseURL ='http://ec2-52-87-220-31.compute-1.amazonaws.com/';
+axios.defaults.baseURL ='https://dgiqy03oxkzp1.cloudfront.net/';
 
 const rootReactElement = () => {
   return (
