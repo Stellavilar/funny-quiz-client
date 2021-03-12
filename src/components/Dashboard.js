@@ -7,7 +7,6 @@ function Dashboard () {
     return (
         <div className="dashboard">
             <Slides />
-            <p>test</p>
         </div>
     );
 };
