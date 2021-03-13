@@ -28,6 +28,34 @@ body {
   }
 
 }
+/*Header*/
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+
+  a { 
+    width: 200px
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .ui.icon.input {
+    width: 300px;
+  }
+
+  .user.circle.icon {
+    font-size: 3em;
+  }
+
+  .burger-button { 
+    display: none;
+  }
+}
 /*Slides*/
 .slides {
   width: 65%;
@@ -74,6 +102,32 @@ body {
         font-size: 2em;
         margin:auto;
       }
+    }
+  }
+  /*Header*/
+  .header {
+
+    a { 
+      width: 100px
+    }
+    img {
+      width: 100%;
+      padding:10px;
+    }
+
+    .ui.icon.input {
+      width: 120px;
+      height: 30px;
+    }
+  
+    .user.circle.icon {
+      display: none;
+    }
+
+    .burger-button { 
+      display: block;
+      font-size: 2em;
+      color: $blue;
     }
   }
   /*Page 404*/
