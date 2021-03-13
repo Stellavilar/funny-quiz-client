@@ -84,6 +84,58 @@ body {
     }
   }
 }
+/*Quizzes pages*/
+.quiz {
+  padding: 5em;
+  display: flex;
+  flex-direction: column;
+
+   li {
+     list-style: none;
+     margin-bottom: 1em;
+     font-size: 1.3em;
+   }
+   img { 
+    height: 100px;
+   }
+   .arrow {
+     color: $blue;
+     font-size: 1.2em;
+     margin-top: 50px;
+     &:hover{
+      color: green;
+    }
+   }
+
+   .ui.checkbox {
+     margin-right: 1.5em;
+   }
+   .ui.segment {
+     width: 80%;
+   }
+   .ui.button {
+     margin: 15px;
+     background-color: $violet;
+     color: white;
+   }
+   .badAnswer {
+     color: #930224;
+     font-size: 1.2em;
+     font-weight: bold;
+     text-align: center;
+   }
+   .goodAnswer {
+     color: #0c7f06;
+     font-size: 1.2em;
+     font-weight: bold;
+     text-align: center;
+   }
+   .noAnswer {
+     color: red;
+   }
+  
+}
+
 
 /*Mobile version*/
 @media only screen and (max-width: 768px) {
@@ -137,6 +189,42 @@ body {
     .page404-text { 
       font-size: 2em;
     }
+  }
+  /*Quiz page*/
+  .quiz {
+    padding: 0.5em;
+    
+    .main-quiz {
+      background-color: $grey;
+    }
+    .header {
+      p {
+        font-size: 1em;
+      }
+    }
+    .arrow {
+      font-size: 1em;
+      text-align: center;
+    }
+    .ui.segment {
+      width: 100%;
+      font-size: 0.8em;
+    }
+    .ui.form {
+      .ui.radio.checkbox{
+        label {
+          font-size: 0.8em;
+        }
+      }
+    }
+    img {
+      height: 50px;
+    }
+    .ui.form.score {
+      display: flex;
+      align-items: center;
+      font-size: 1em;
+  }
   }
 
 }
