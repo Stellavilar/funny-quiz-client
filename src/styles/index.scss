@@ -136,6 +136,16 @@ body {
    }
   
 }
+/**Item menu*/
+.head {
+  margin:30px;
+  .ui.pointing.dropdown.link.item {
+    width:12.5%;
+  }
+}
+.mobile-menu { 
+  display: none;
+}
 /*Footer*/
 .footer {
   height: 40px;
@@ -206,6 +216,25 @@ body {
       font-size: 2em;
     }
   }
+  /*Item menu*/
+  .head { 
+    display: none;
+  }
+  .mobile-menu { 
+    display: block;
+    padding: 10px;
+    .ui.pointing.dropdown.link.item {
+      margin: 2%;
+      padding:10px;
+      border-radius: 5px;
+    }
+    .menu.transition.visible {
+      padding: 10px;
+        a {
+          padding: 3px;
+        }
+    }
+  }
   /*Quiz page*/
   .quiz {
     padding: 0.5em;
@@ -242,5 +271,13 @@ body {
       font-size: 1em;
   }
   }
+  /*Footer*/
+  .footer {
 
+     .footer-text {
+       margin-top: 10px;
+      font-size: 1em;
+     }
+    
+  }
 }

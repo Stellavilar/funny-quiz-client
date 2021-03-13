@@ -5,7 +5,9 @@ import '../styles/index.scss';
 import Page404 from './Page404';
 import Dashboard from './Dashboard';
 import SubCatQuiz from './SubCatQuiz';
+import SpecificQuiz from './SpecificQuiz';
 import Footer from './Footer';
+
 
 
 function App () {
@@ -15,6 +17,9 @@ function App () {
         <Route exact path='/'>
             <Dashboard />
             <Footer />
+        </Route>
+        <Route exact path='/specificQuiz/:tagId/level/:levelId'> 
+            <SpecificQuiz />
         </Route>
         <Route exact path='/classifiedQuiz/:id'> 
             <SubCatQuiz />
