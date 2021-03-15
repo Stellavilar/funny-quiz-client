@@ -8,6 +8,7 @@ import SubCatQuiz from './SubCatQuiz';
 import SpecificQuiz from './SpecificQuiz';
 import CreateAccount from './CreateAccount';
 import Login from './Login';
+import ProfilPage from './ProfilPage';
 import Footer from './Footer';
 
 
@@ -31,6 +32,9 @@ function App () {
         </Route>
         <Route exact path='/login'> 
             <Login />
+        </Route>
+        <Route exact path='/profilPage/:id'> 
+            <ProfilPage />
         </Route>
         <Route>
           <Page404 />

@@ -204,6 +204,44 @@ body {
 
   }
 }
+/*Profil page*/
+.profil-page {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 86vh;
+
+  .ui.button {
+    align-self: flex-end;
+  }
+  .header {
+    img {
+      width: 20%;
+    }
+  }
+  .arrow {
+    color: $blue;
+    font-size: 1.2em;
+    margin-top: 50px;
+    &:hover{
+     color: green;
+   }
+  }
+  .ui.segment {
+
+    background-color: $grey;
+
+    .ui.header.welcome {
+      color: $blue;
+      font-size: 2em;
+      text-align: center;
+      margin-bottom: 50px;
+      text-decoration: underline;
+    }
+  }
+}
+
 /*Dashboard*/
 .dashboard {
   .username {

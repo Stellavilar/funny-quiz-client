@@ -8,6 +8,8 @@ function BurgerButton () {
 
     /**Detect if a user is connected */
     const getToken = localStorage.getItem('token');
+    /**Get user id  */
+    const userId = localStorage.getItem('userId');
 
     /**On click disconnect button, remove token and username from localstorage */
     const disconnect = () => {
@@ -31,7 +33,7 @@ function BurgerButton () {
             <Dropdown item text='' icon='bars'>
             {getToken ? 
                 <Dropdown.Menu>
-                    <Dropdown.Item >Voir mon profil</Dropdown.Item>
+                    <Dropdown.Item onClick={()=> history.push(`/profilPage/${userId}`)}>Voir mon profil</Dropdown.Item>
                     <Dropdown.Item onClick={()=> disconnect()}>Déconnexion</Dropdown.Item>
                 </Dropdown.Menu> :
                 <Dropdown.Menu>

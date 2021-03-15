@@ -19,9 +19,10 @@ function Login () {
         e.preventDefault();
         axios.post('api/login', userProfil)
             .then((res) => {
-                //Store token and username on localStorage
+                //Store token, username and userId on localStorage
                 localStorage.setItem('token', res.data.token.rows[0].token);
                 localStorage.setItem('username', res.data.token.rows[0].username);
+                localStorage.setItem('userId', res.data.token.rows[0].id)
                 setUserData(res.data.token.rows[0].username);
                 setUserPW(res.data.token.rows[0].password);
                 //if login is ok, redirect to main page
