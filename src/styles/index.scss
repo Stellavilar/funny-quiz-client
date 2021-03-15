@@ -204,6 +204,14 @@ body {
 
   }
 }
+/*Dashboard*/
+.dashboard {
+  .username {
+    text-align: center;
+    color: $blue;
+    font-size: 2em;
+  }
+}
 /*Footer*/
 .footer {
   height: 40px;
@@ -349,6 +357,14 @@ body {
       font-size: 1em;
   }
   }
+  /*Dashboard*/
+.dashboard {
+  .username {
+    text-align: center;
+    color: $blue;
+    font-size: 1em;
+  }
+}
   /*Profil-form */
   .profil-form { 
     img { 
