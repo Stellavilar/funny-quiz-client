@@ -45,7 +45,6 @@ function Header () {
                     getQuiz(data.result.id)
                    }
             />
-            <i className="user circle icon"></i>
             <BurgerButton />
         </div>
     );

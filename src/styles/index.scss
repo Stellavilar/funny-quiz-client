@@ -49,12 +49,30 @@ body {
     width: 300px;
   }
 
-  .user.circle.icon {
-    font-size: 3em;
-  }
-
   .burger-button { 
-    display: none;
+    font-size: 2.5em;
+    color: $blue;
+    .menu.transition.visible {
+      position: fixed;
+      top: 2em;
+      left: 85%;
+      width: 10%;
+      min-height: calc(100vh-5em);
+      border-radius: 0;
+
+      .item {
+        text-align: center;
+        color: $blue;
+        font-weight: bold;
+        border-bottom: 1px solid;
+        padding: 1em 0 !important;
+      }
+
+      .item:last-child {
+        border: none;
+      }
+    }
+    
   }
 }
 /*Slides*/
@@ -146,6 +164,46 @@ body {
 .mobile-menu { 
   display: none;
 }
+/*Profil form*/
+.profil-form {
+  text-align: center;
+  padding: 5px;
+  height: 100vh;
+
+
+  img { 
+    height: 100px;
+  }
+  p{
+    font-size: 20px;
+    font-weight: bold;
+    color: $blue;
+  }
+
+  .ui.header {
+    margin-top: 100px;
+    font-family: 'Grandstander', cursive;
+    color: #a52a2a;
+    margin-left: 45%;
+  }
+
+  .ui.form {
+    margin: 60px;
+
+    .field {
+      width: 40%;
+      margin: auto;
+    }
+
+    .buttons {
+      margin: 25px;
+    }
+    .error {
+      font-size: 0.8em;
+    }
+
+  }
+}
 /*Footer*/
 .footer {
   height: 40px;
@@ -203,9 +261,29 @@ body {
     }
 
     .burger-button { 
-      display: block;
-      font-size: 2em;
+      font-size: 2.5em;
       color: $blue;
+
+      .menu.transition.visible {
+        position: fixed;
+        top: 2em;
+        left: 50%;
+        width: 50vw;
+        min-height: calc(100vh-5em);
+        border-radius: 0;
+  
+        .item {
+          text-align: center;
+          color: $blue;
+          font-weight: bold;
+          border-bottom: 1px solid;
+          padding: 1.3em 0 !important;
+        }
+  
+        .item:last-child {
+          border: none;
+        }
+      }
     }
   }
   /*Page 404*/
@@ -270,6 +348,39 @@ body {
       align-items: center;
       font-size: 1em;
   }
+  }
+  /*Profil-form */
+  .profil-form { 
+    img { 
+      height: 50px;
+    }
+    p{
+      font-size: 10px;
+      font-weight: bold;
+      color: $blue;
+    }
+    .ui.header {
+      margin-top: 100px;
+      font-family: 'Grandstander', cursive;
+      color: #a52a2a;
+      margin-left: 35%;
+      font-size: 1em;
+    }
+    .ui.form {
+      margin: 30px;
+  
+      .field {
+        width: 90%;
+        margin: auto;
+      }
+  
+      .buttons {
+        margin: 25px;
+      }
+      .error {
+        font-size: 0.8em;
+      }
+    }
   }
   /*Footer*/
   .footer {
