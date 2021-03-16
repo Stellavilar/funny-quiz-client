@@ -7,6 +7,10 @@ import { Segment, Header, Form, Checkbox, Dimmer, Loader } from 'semantic-ui-rea
 
 const Quiz = () => {
     const history = useHistory();
+    /**Detect if a user is connected */
+    const getToken = localStorage.getItem('token');
+    /**Get user id  */
+    const userId = localStorage.getItem('userId');
     /**Check answer */
     const [ answ, setAnsw ] = useState([]);
     /**Handle checkbox */
@@ -67,6 +71,25 @@ const Quiz = () => {
             })
     };
 
+    /**Save score if user is connected */
+    const handleChangeScore = (e) => { console.log(e.target) };
+    const handleSubmitScore = (e) => {
+        e.preventDefault();
+        const result = {
+            number: e.target.children[1].valueAsNumber,
+            tag_id: tagId,
+            level_id: levelId
+        }
+        axios
+            .post(`user/${userId}/scores`, result)
+            .then((res)=> {
+                history.push(`/profilPage/${userId}`)
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+    };
+
     useEffect(quizzes, [levelId, tagId]);
 
     const getQuiz = quiz.map((quizzes) =>
@@ -92,9 +115,20 @@ const Quiz = () => {
                     <Header as='h2'> Thème : {getTitle} / {getLevel}</Header>
                         {loading ? [] :  <Dimmer active inverted><Loader inverted /></Dimmer> }
                         {getQuiz}
-                </div>
-                <div className="counter">
-                    <p>Vous avez {count} points</p>
+                        <Form
+                            className="score"
+                            onSubmit={handleSubmitScore}>
+                        <p>Vous avez</p>
+                        <input
+                            style={{border: 'none', width: '7%', fontFamily: 'Grandstander',}}
+                            type="number"
+                            name="number"
+                            value={count}
+                            onChange={handleChangeScore}
+                        />
+                        <p>points</p>
+                        {getToken ? <Form.Button>Sauvegarder</Form.Button> : <Form.Button disabled >Sauvegarder</Form.Button> }
+                        </Form>
                 </div>
             </div>
     );

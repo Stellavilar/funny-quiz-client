@@ -6,6 +6,10 @@ import { Segment, Header, Form, Checkbox, Dimmer, Loader } from 'semantic-ui-rea
 
 function SubCatQuiz () {
     const history = useHistory();
+    /**Detect if a user is connected */
+    const getToken = localStorage.getItem('token');
+    /**Get user id  */
+    const userId = localStorage.getItem('userId');
     /**Check answer */
     const [ answ, setAnsw ] = useState([]);
     /**Show anecdote */
@@ -61,6 +65,31 @@ function SubCatQuiz () {
         })
     };
 
+    /**Save score if user is connected */
+    const handleChangeScore = (e) => { console.log(e.target) };
+    const handleSubmitScore = (e) => {
+        e.preventDefault();
+        const result = {
+            number: e.target.children[1].valueAsNumber,
+            subcategory_id: id,
+        }
+        axios
+            .post(`user/${userId}/scores`, result, {
+                headers: {
+                  Authorization: 'Bearer ' + localStorage.getItem('token'),
+                  post: {
+                    'Content-Type': 'multipart/form-data',
+                  },
+                }
+            })
+            .then((res)=> {
+                history.push(`/profilPage/${userId}`)
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+    };
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(() => { subCategories() }, [])
 
@@ -88,9 +117,21 @@ function SubCatQuiz () {
                 <Header as='h2'>Questions</Header>
                 {loading ? [] :  <Dimmer active inverted><Loader inverted /></Dimmer> }
                 {getQuiz}
-            </div>
-            <div className="counter">
-                <p>Vous avez {count} points</p>
+                <Form
+                    className="score"
+                    onSubmit={handleSubmitScore}>
+                        <p>Vous avez</p>
+                        <input
+                        style={{border: 'none', width: '7%', fontFamily: 'Grandstander',}}
+                        type="number"
+                        name="number"
+                        value={count}
+                        onChange={handleChangeScore}
+                        />
+                        <p>points</p>
+                        {getToken ? <Form.Button>Sauvegarder</Form.Button> : <Form.Button disabled >Sauvegarder</Form.Button> }
+                    
+                </Form>
             </div>
         </div>
     );

@@ -15,12 +15,7 @@ function ProfilPage () {
     const [ userData, getUserData ] = useState([]);
     const userProfil = () => {
         axios
-            .get(`/users/${userId}` , { 
-                // withCredentials: true,
-                headers: {
-                  Authorization: 'Bearer ' + localStorage.getItem('token')
-                }
-            })
+            .get(`/users/${userId}`)
             .then((res) => {
                 getUserData(res.data);                
                 setLoading(true);
@@ -35,13 +30,9 @@ function ProfilPage () {
    const [ userHistory, setUserHistory ] = useState([]);
    const getHistory = () => {
        axios
-        .get(`scoresbyuser/user/${userId}` , { 
-            withCredentials: true,
-            headers: {
-              Authorization: 'Bearer ' + localStorage.getItem('token')
-            }
-        })
+        .get(`scoresbyuser/user/${userId}`)
         .then((res) => {
+            console.log(res.data)
             setUserHistory(res.data);
         })
         .catch((err) => {
@@ -128,7 +119,6 @@ function ProfilPage () {
                
             </Segment>
             <div className='buttons'>
-                <Button onClick={() => history.push(`/editprofile/${userData.id}`)}  >Modifier le profil</Button>
                 <Button color='red' onClick={() =>setGetOpen(true)}>Supprimer le profil</Button>
             </div>
             <Confirm 

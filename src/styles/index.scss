@@ -239,6 +239,10 @@ body {
       margin-bottom: 50px;
       text-decoration: underline;
     }
+
+    .ui.header {
+      font-size: 1em;
+    }
   }
 }
 
@@ -401,6 +405,33 @@ body {
     text-align: center;
     color: $blue;
     font-size: 1em;
+  }
+}
+/*Profil page*/
+.profil-page {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 86vh;
+
+  .header {
+    img {
+      width: 100%;
+    }
+  }
+
+  .ui.segment {
+
+    background-color: $grey;
+
+    .ui.header.welcome {
+      color: $blue;
+      font-size: 1em;
+      text-align: center;
+      margin-bottom: 30px;
+      text-decoration: underline;
+    }
   }
 }
   /*Profil-form */
