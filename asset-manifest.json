@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/funny-quiz-client/static/css/main.bba1a8dc.chunk.css",
-    "main.js": "/funny-quiz-client/static/js/main.ce45c91a.chunk.js",
-    "main.js.map": "/funny-quiz-client/static/js/main.ce45c91a.chunk.js.map",
+    "main.css": "/funny-quiz-client/static/css/main.7dc1d6a4.chunk.css",
+    "main.js": "/funny-quiz-client/static/js/main.94790afa.chunk.js",
+    "main.js.map": "/funny-quiz-client/static/js/main.94790afa.chunk.js.map",
     "runtime-main.js": "/funny-quiz-client/static/js/runtime-main.7c4f7ca7.js",
     "runtime-main.js.map": "/funny-quiz-client/static/js/runtime-main.7c4f7ca7.js.map",
     "static/css/2.b57b7cfd.chunk.css": "/funny-quiz-client/static/css/2.b57b7cfd.chunk.css",
-    "static/js/2.32639697.chunk.js": "/funny-quiz-client/static/js/2.32639697.chunk.js",
-    "static/js/2.32639697.chunk.js.map": "/funny-quiz-client/static/js/2.32639697.chunk.js.map",
+    "static/js/2.760c3dfc.chunk.js": "/funny-quiz-client/static/js/2.760c3dfc.chunk.js",
+    "static/js/2.760c3dfc.chunk.js.map": "/funny-quiz-client/static/js/2.760c3dfc.chunk.js.map",
     "index.html": "/funny-quiz-client/index.html",
     "static/css/2.b57b7cfd.chunk.css.map": "/funny-quiz-client/static/css/2.b57b7cfd.chunk.css.map",
-    "static/css/main.bba1a8dc.chunk.css.map": "/funny-quiz-client/static/css/main.bba1a8dc.chunk.css.map",
-    "static/js/2.32639697.chunk.js.LICENSE.txt": "/funny-quiz-client/static/js/2.32639697.chunk.js.LICENSE.txt",
+    "static/css/main.7dc1d6a4.chunk.css.map": "/funny-quiz-client/static/css/main.7dc1d6a4.chunk.css.map",
+    "static/js/2.760c3dfc.chunk.js.LICENSE.txt": "/funny-quiz-client/static/js/2.760c3dfc.chunk.js.LICENSE.txt",
     "static/media/FUNNY QUIZ.db982200.jpg": "/funny-quiz-client/static/media/FUNNY QUIZ.db982200.jpg",
     "static/media/index.scss": "/funny-quiz-client/static/media/img2.8d375172.png"
   },
   "entrypoints": [
     "static/js/runtime-main.7c4f7ca7.js",
     "static/css/2.b57b7cfd.chunk.css",
-    "static/js/2.32639697.chunk.js",
-    "static/css/main.bba1a8dc.chunk.css",
-    "static/js/main.ce45c91a.chunk.js"
+    "static/js/2.760c3dfc.chunk.js",
+    "static/css/main.7dc1d6a4.chunk.css",
+    "static/js/main.94790afa.chunk.js"
   ]
 }
